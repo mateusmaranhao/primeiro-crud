@@ -2,3 +2,21 @@ main {
   display: grid;
   place-items: center;
 }
+
+ul li {
+  list-style: none;
+}
+
+.deleteButton {
+  border: none;
+  border-radius: 5%;
+  font-weight: 700;
+
+  background-color: hsl(0, 100%, 63%);
+  color: hsl(0, 0%, 100%);;
+
+  margin: 0 5px 5px 0;
+  padding: 5px 10px;
+
+  cursor: pointer;
+}
