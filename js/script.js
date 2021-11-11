@@ -30,9 +30,24 @@ function activateInput() {
 
   function insertName(newName) {
     globalNames.push(newName);
-
-    console.log(globalNames)
+    render();
   }
-
   inputName.focus();
 };
+
+function render(){
+  var divNames = document.querySelector('#names');
+  var ul = document.createElement('ul');
+
+  for(var i = 0; i < globalNames.length; i++) {
+    var currentName = globalNames[i];
+    divNames.innerHTML = '';
+
+    var li = document.createElement('li');
+    li.textContent = currentName;
+     
+    ul.appendChild(li);
+  }
+
+  divNames.appendChild(ul);
+}
